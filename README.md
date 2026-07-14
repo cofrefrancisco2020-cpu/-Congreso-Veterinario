@@ -1,53 +1,54 @@
-# Congreso Veterinario Limari 2026 - Version 1
+# Congreso Veterinario Limarí 2026 - Versión 2
 
-Proyecto estatico para una landing profesional del Congreso Veterinario Limari 2026.
+Sitio estático navegable para CVET Limarí 2026. Esta versión conserva `versión 1` sin cambios y reorganiza el contenido en vistas independientes controladas desde el menú superior.
 
-## Ruta
+## Navegación
 
-Carpeta final:
+El sitio utiliza rutas con hash para ofrecer una experiencia de varias secciones sin incorporar un framework innecesario:
 
-```text
-C:\Users\h\OneDrive\Escritorio\Congreso Veterinario Limari\version 1
-```
+- `#inicio`
+- `#congreso`
+- `#programa`
+- `#expositores`
+- `#recuerdos`
+- `#inscripcion`
 
-Archivo principal:
-
-```text
-index.html
-```
+Solo una vista permanece visible a la vez. El estado activo se muestra en el menú y la navegación funciona con los controles atrás/adelante del navegador.
 
 ## Archivos principales
 
-- `index.html`: estructura de la pagina.
-- `styles.css`: estilos responsive, identidad visual y animaciones.
-- `script.js`: menu mobile, animaciones, acordeones, selector de entradas y pago online.
-- `brief-marca.md`: investigacion, fuentes, decisiones y limitaciones.
-- `assets/`: imagenes finales usadas por la pagina.
+- `index.html`: contenido, vistas y estructura accesible.
+- `styles.css`: identidad visual, diseño responsive y animaciones.
+- `script.js`: navegación, menú móvil, cuenta regresiva, galería, animaciones y enlace centralizado a Fila Cero.
+- `brief-marca.md`: fuentes, decisiones visuales y selección de recursos.
+- `assets/photos/`: fotografías documentales optimizadas.
+- `assets/sponsors/`: logos de auspiciadores y colaboradores.
+- `assets/speaker-ai-*.jpg`: retratos editoriales de expositores heredados de la primera versión.
 
-## Assets
+## Inscripción
 
-Todos los assets finales estan en una sola carpeta `assets`, sin subcarpetas.
+Todos los llamados de inscripción se configuran desde una sola propiedad en `script.js`:
 
-Incluye:
+```js
+SITE_CONFIG.filaCeroUrl
+```
 
-- Logo oficial recortado desde fuente visual.
-- Hero grupal generado con IA desde la referencia real de comunidad/asistentes del congreso.
-- Imagenes de observatorio y cata de pisco generadas/mejoradas con IA desde referencias del evento.
-- Retratos de expositores generados con IA desde referencias oficiales para evitar usar los flyers originales como tarjetas.
+El sitio no procesa pagos. La inscripción y compra se completan en la página oficial del evento en Fila Cero.
 
-## Entradas y pagos
+## Ejecución local
 
-La seccion de pago online incluye un flujo interactivo aplicado a las entradas del congreso.
+Puede abrirse con un servidor web estático. Por ejemplo:
 
-No procesa pagos reales. Para produccion se puede integrar:
+```powershell
+python -m http.server 8017
+```
 
-- Webpay Plus.
-- Flow.
-- Mercado Pago.
-- Khipu.
+Luego se visita `http://127.0.0.1:8017/`.
 
-## Investigacion
+## Criterios de rendimiento
 
-Se revisaron Instagram, capturas oficiales entregadas por el usuario, publicacion publica de LinkedIn y pagina de venta FilaCero indicada por el usuario.
-
-Limitacion principal: parte del contenido de Instagram esta limitado sin iniciar sesion; por eso se usaron las capturas entregadas como respaldo visual y de informacion.
+- Fotografías seleccionadas y redimensionadas para uso web.
+- Imágenes secundarias con carga diferida.
+- Sin dependencias de aplicación ni proceso de compilación.
+- Movimiento reducido cuando el sistema del visitante solicita `prefers-reduced-motion`.
+- Carrusel automático de logos con control para pausar o reanudar; en modo de movimiento reducido avanza más despacio.

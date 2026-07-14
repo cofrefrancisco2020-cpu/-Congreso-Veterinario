@@ -4,508 +4,468 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Congreso Veterinario Limarí 2026 | El Congreso de las Estrellas</title>
-  <meta name="description" content="CVET Limarí 2026 en Ovalle. Congreso veterinario para médicos veterinarios con charlas, expositores, networking, observatorio y experiencia pisquera." />
+  <meta name="description" content="Congreso Veterinario Limarí 2026 en Ovalle: dos jornadas de actualización, comunidad, expositores y experiencias del Valle del Limarí." />
+  <meta name="theme-color" content="#061427" />
   <link rel="icon" href="./assets/logo-cvet-limari.jpg" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600&family=Sora:wght@600;700;800&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles.css?v=3" />
 </head>
 <body>
-  <div class="site-shell">
-    <header class="site-header" data-header>
-      <a href="#inicio" class="brand" aria-label="Volver al inicio">
-        <img src="./assets/logo-cvet-limari.jpg" alt="Logo Congreso Veterinario Limarí" />
-        <span>
-          <strong>CVET Limarí</strong>
-          <small>Congreso de las Estrellas</small>
-        </span>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <header class="site-header" data-header>
+    <a class="brand" href="#inicio" data-route="inicio" aria-label="Ir al inicio">
+      <img src="./assets/logo-cvet-limari.jpg" alt="" />
+      <span>
+        <strong>CVET Limarí</strong>
+        <small>Congreso de las Estrellas</small>
+      </span>
+    </a>
+
+    <button class="nav-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" data-nav-toggle>
+      <i data-lucide="menu" aria-hidden="true"></i>
+    </button>
+
+    <nav class="main-nav" aria-label="Navegación principal" data-nav>
+      <a href="#inicio" data-route="inicio">Inicio</a>
+      <a href="#congreso" data-route="congreso">Congreso</a>
+      <a href="#programa" data-route="programa">Programa</a>
+      <a href="#expositores" data-route="expositores">Expositores</a>
+      <a href="#recuerdos" data-route="recuerdos">Recuerdos</a>
+      <a class="nav-cta" href="#inscripcion" data-route="inscripcion">
+        <i data-lucide="ticket" aria-hidden="true"></i> Inscripción
       </a>
+    </nav>
+  </header>
 
-      <button class="nav-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" data-nav-toggle>
-        <i data-lucide="menu"></i>
-      </button>
-
-      <nav class="main-nav" data-nav>
-        <a href="#experiencia">Experiencia</a>
-        <a href="#programa">Programa</a>
-        <a href="#expositores">Expositores</a>
-        <a href="#entradas">Entradas</a>
-        <a href="#pago">Pago online</a>
-        <a class="nav-cta" href="#entradas"><i data-lucide="ticket"></i> Inscribirme</a>
-      </nav>
-    </header>
-
-    <main>
-      <section class="hero" id="inicio" aria-label="Congreso Veterinario Limarí 2026">
-        <div class="hero-bg" aria-hidden="true"></div>
-        <div class="orbit orbit-one" aria-hidden="true"></div>
-        <div class="orbit orbit-two" aria-hidden="true"></div>
-
-        <div class="hero-content">
-          <div class="hero-copy reveal">
-            <span class="eyebrow">12 y 13 de noviembre · Casino Resort Ovalle</span>
-            <h1>Congreso Veterinario Limarí 2026</h1>
-            <p>
-              Dos días de congreso presencial, charlas con expositores, networking y experiencias del Valle del Limarí para médicos veterinarios que quieren aprender bajo las estrellas.
-            </p>
-            <div class="hero-actions">
-              <a class="btn btn-primary" href="#entradas"><i data-lucide="ticket-check"></i> Ver entradas</a>
-              <a class="btn btn-secondary" href="#programa"><i data-lucide="calendar-days"></i> Ver programa</a>
-            </div>
-          </div>
-
-          <div class="hero-panel reveal" data-stagger="2">
-            <div class="countdown" aria-label="Cuenta regresiva al congreso">
-              <span>Faltan</span>
-              <strong data-countdown-days>--</strong>
-              <small>días para Ovalle</small>
-            </div>
-            <div class="hero-facts">
-              <div>
-                <i data-lucide="map-pin"></i>
-                <span>Ovalle, Chile</span>
-              </div>
-              <div>
-                <i data-lucide="star"></i>
-                <span>4a versión</span>
-              </div>
-              <div>
-                <i data-lucide="users-round"></i>
-                <span>Comunidad veterinaria del norte</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="quick-strip reveal" aria-label="Datos principales">
-        <div>
-          <strong>Desde $200.000</strong>
-          <span>Preventa solo congreso</span>
-        </div>
-        <div>
-          <strong>$350.000</strong>
-          <span>Experiencia completa</span>
-        </div>
-        <div>
-          <strong>Programa oficial</strong>
-          <span>Charlas + experiencias</span>
-        </div>
-        <div>
-          <strong>Observatorio + pisco</strong>
-          <span>Cupos limitados</span>
-        </div>
-      </section>
-
-      <section class="section experience-section" id="experiencia">
-        <div class="section-heading reveal">
-          <span class="eyebrow">Vive la experiencia</span>
-          <h2>No es solo asistir a charlas. Es aprender, conectar y vivir el Limarí.</h2>
-          <p>
-            CVET Limarí mezcla actualización profesional con experiencias locales: charlas, cata de pisco, observatorio astronómico y comunidad veterinaria.
-          </p>
-        </div>
-
-        <div class="experience-grid">
-          <article class="feature-card reveal">
-            <i data-lucide="presentation"></i>
-            <h3>Programa oficial</h3>
-            <p>Charlas, bloques de experiencia y espacios de comunidad distribuidos en dos jornadas, según el cronograma publicado por CVET Limarí.</p>
-          </article>
-          <article class="feature-card reveal" data-stagger="1">
-            <i data-lucide="telescope"></i>
-            <h3>Observatorio bajo las estrellas</h3>
-            <p>Una experiencia nocturna conectada con el sello astronómico de la zona norte y el concepto del Congreso de las Estrellas.</p>
-          </article>
-          <article class="feature-card reveal" data-stagger="2">
-            <i data-lucide="wine"></i>
-            <h3>Experiencia pisquera</h3>
-            <p>Cata, elaboración del pisco y sabores del Limarí, con cupos limitados según inscripción previa.</p>
-          </article>
-          <article class="feature-card reveal" data-stagger="3">
-            <i data-lucide="sparkles"></i>
-            <h3>Fiesta y networking</h3>
-            <p>Espacios para compartir con colegas, expositores, marcas y comunidad veterinaria de distintas regiones.</p>
-          </article>
-        </div>
-
-        <div class="split-feature reveal">
-          <div class="split-copy">
-            <span class="eyebrow">El norte tambien construye ciencia</span>
-            <h3>La veterinaria no pasa solo en Santiago.</h3>
-            <p>
-              El congreso nace desde regiones con una mirada cercana, práctica e inspiradora, reuniendo referentes nacionales, marcas y profesionales que buscan actualizarse en un entorno distinto.
-            </p>
-            <a class="inline-link" href="#expositores">Conocer expositores <i data-lucide="arrow-right"></i></a>
-          </div>
-          <div class="experience-proof">
-            <div>
-              <strong>4a versión</strong>
-              <span>Un congreso que vuelve a reunir a la comunidad veterinaria del norte.</span>
-            </div>
-            <div>
-              <strong>2 jornadas</strong>
-              <span>Charlas, pausas de networking, stands y experiencias locales.</span>
-            </div>
-            <div>
-              <strong>Ovalle</strong>
-              <span>Casino Resort como punto de encuentro para aprender y conectar.</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section program-section" id="programa">
-        <div class="section-heading reveal">
-          <span class="eyebrow">Programa desplegable</span>
-          <h2>Dos jornadas de aprendizaje, experiencias y comunidad.</h2>
-          <p>Horarios sujetos a modificación por la organización. Los títulos de algunas conferencias serán confirmados por CVET Limarí.</p>
-        </div>
-
-        <div class="program-layout">
-          <details class="day-panel reveal" open>
-            <summary>
-              <span>Jueves 12 de noviembre</span>
-              <i data-lucide="chevron-down"></i>
-            </summary>
-            <div class="timeline">
-              <div><time>08:30 - 09:20</time><p><strong>Acreditación</strong><small>Entrega de credenciales + regalo.</small></p></div>
-              <div><time>09:20 - 09:30</time><p><strong>Apertura oficial</strong><small>Bienvenida Dr. Matías Morovic.</small></p></div>
-              <div><time>09:30 - 11:00</time><p><strong>Vet's en acción</strong><small>Simulación clínica en vivo.</small></p></div>
-              <div><time>11:00 - 11:45</time><p><strong>Coffee break</strong><small>Visita a stand + networking.</small></p></div>
-              <div><time>11:45 - 12:45</time><p><strong>Charla Dr. Enzo Bosco</strong><small>Tema por confirmar.</small></p></div>
-              <div><time>12:00 - 13:00</time><p><strong>Experiencia Pisquera Limarí</strong><small>Elaboración del pisco. Grupo 2 · 20 cupos.</small></p></div>
-              <div><time>12:45 - 13:00</time><p><strong>Charla Técnica VITANIMAL</strong></p></div>
-              <div><time>13:00 - 14:30</time><p><strong>Almuerzo</strong><small>Tiempo libre.</small></p></div>
-              <div><time>14:30 - 15:30</time><p><strong>Charla Dr. Enzo Bosco</strong><small>Tema por confirmar.</small></p></div>
-              <div><time>15:30 - 15:45</time><p><strong>Charla Técnica ZOETIS</strong></p></div>
-              <div><time>15:45 - 16:45</time><p><strong>Charla Dr. Santiago Fuensalida</strong><small>Tema por confirmar.</small></p></div>
-              <div><time>16:00 - 17:00</time><p><strong>Experiencia Pisquera Limarí</strong><small>Elaboración del pisco. Grupo 2 · 20 cupos.</small></p></div>
-              <div><time>16:45 - 17:30</time><p><strong>Coffee break</strong><small>Visita a stand + networking.</small></p></div>
-              <div><time>17:30 - 17:45</time><p><strong>Charla Técnica Dragpharma</strong></p></div>
-              <div><time>17:45 - 18:45</time><p><strong>Charla Dr. Santiago Fuensalida</strong><small>Tema por confirmar.</small></p></div>
-              <div><time>18:45 - 19:00</time><p><strong>Foto oficial</strong><small>Congreso de las Estrellas.</small></p></div>
-              <div><time>19:00 - 20:00</time><p><strong>Cata de pisco</strong><small>50 cupos · Experiencia Limarí.</small></p></div>
-              <div><time>20:00 - 21:00</time><p><strong>Observatorio</strong><small>Experiencia Limarí.</small></p></div>
-              <div><time>21:00 - 02:00</time><p><strong>Fiesta del Pisco</strong><small>Música, networking, regalos y celebración.</small></p></div>
-            </div>
-          </details>
-
-          <details class="day-panel reveal" data-stagger="1" open>
-            <summary>
-              <span>Viernes 13 de noviembre</span>
-              <i data-lucide="chevron-down"></i>
-            </summary>
-            <div class="timeline">
-              <div><time>09:30 - 10:30</time><p><strong>Charla Dra. Lina Sanz</strong><small>Tema por confirmar.</small></p></div>
-              <div><time>10:30 - 11:30</time><p><strong>Charla Dra. Christel Cuneo</strong><small>Tema por confirmar.</small></p></div>
-              <div><time>11:30 - 12:15</time><p><strong>Coffee break</strong><small>Visita a stand + networking.</small></p></div>
-              <div><time>12:00 - 13:00</time><p><strong>Experiencia Pisquera Limarí</strong><small>Elaboración del pisco. Grupo 3 · 20 cupos.</small></p></div>
-              <div><time>12:15 - 13:15</time><p><strong>Charla Dr. Carlos Ruiz</strong><small>Tema por confirmar.</small></p></div>
-              <div><time>13:15 - 13:30</time><p><strong>Charla Técnica MSD</strong></p></div>
-              <div><time>13:30 - 14:30</time><p><strong>Brunch de negocios</strong><small>Networking & alianzas.</small></p></div>
-              <div><time>14:30 - 15:30</time><p><strong>Charla Dra. Christel Cuneo</strong><small>Tema por confirmar.</small></p></div>
-              <div><time>15:30 - 15:45</time><p><strong>Charla Técnica Sponsor</strong></p></div>
-              <div><time>15:45 - 16:45</time><p><strong>Charla César Villalta</strong><small>Tema por confirmar.</small></p></div>
-              <div><time>16:45 - 17:15</time><p><strong>Cierre + agradecimientos</strong><small>Dr. Rodrigo Barraza.</small></p></div>
-            </div>
-          </details>
-        </div>
-
-        <div class="highlight-activities reveal">
-          <div class="activity-heading">
-            <span class="eyebrow">Actividades destacadas</span>
-            <h3>Experiencias que hacen único al Congreso de las Estrellas.</h3>
-          </div>
-          <div class="activity-grid">
-            <article class="activity-card">
-              <img src="./assets/actividad-cata-pisco-ai.jpg" alt="Cata y experiencia pisquera en el Valle del Limarí" />
-              <div>
-                <i data-lucide="wine"></i>
-                <h4>Experiencia Pisquera Limarí</h4>
-                <p>3 grupos · 20 cupos c/u para vivir la elaboración del pisco y la identidad local.</p>
-              </div>
-            </article>
-            <article class="activity-card">
-              <img src="./assets/actividad-cata-pisco-ai.jpg" alt="Copas para cata de pisco" />
-              <div>
-                <i data-lucide="glass-water"></i>
-                <h4>Cata de pisco</h4>
-                <p>50 cupos disponibles para compartir una experiencia del Valle del Limarí.</p>
-              </div>
-            </article>
-            <article class="activity-card">
-              <img src="./assets/actividad-observatorio-ai.jpg" alt="Observatorio bajo el cielo nocturno del Limarí" />
-              <div>
-                <i data-lucide="telescope"></i>
-                <h4>Observatorio</h4>
-                <p>Cupos limitados para cerrar el día bajo uno de los cielos más memorables del norte.</p>
-              </div>
-            </article>
-            <article class="activity-card compact">
-              <div>
-                <i data-lucide="music"></i>
-                <h4>Fiesta del Pisco</h4>
-                <p>Música, networking, regalos y celebración para conectar con colegas y marcas.</p>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="section speakers-section" id="expositores">
-        <div class="section-heading reveal">
-          <span class="eyebrow">Expositores</span>
-          <h2>Profesionales destacados para las jornadas del congreso.</h2>
-          <p>Un programa pensado para aprender con referentes, compartir criterio profesional y vivir la veterinaria desde una mirada regional.</p>
-        </div>
-
-        <div class="speakers-grid">
-          <article class="speaker-card reveal">
-            <img src="./assets/speaker-ai-cesar-villalta.jpg" alt="Retrato de Cesar Villalta, expositor CVET Limarí 2026" />
-            <div>
-              <span>Expositor</span>
-              <h3>Cesar Villalta</h3>
-              <p>Sesion viernes · Tema por confirmar</p>
-            </div>
-          </article>
-          <article class="speaker-card reveal" data-stagger="1">
-            <img src="./assets/speaker-ai-carlos-ruiz.jpg" alt="Retrato de Carlos Ruiz, expositor CVET Limarí 2026" />
-            <div>
-              <span>Expositor</span>
-              <h3>Carlos Ruiz</h3>
-              <p>Sesion viernes · Tema por confirmar</p>
-            </div>
-          </article>
-          <article class="speaker-card reveal" data-stagger="2">
-            <img src="./assets/speaker-ai-christel-cuneo.jpg" alt="Retrato de Christel Cuneo, expositora CVET Limarí 2026" />
-            <div>
-              <span>Expositora</span>
-              <h3>Christel Cuneo</h3>
-              <p>Sesiones viernes · Tema por confirmar</p>
-            </div>
-          </article>
-          <article class="speaker-card reveal">
-            <img src="./assets/speaker-ai-santiago-fuensalida.jpg" alt="Retrato de Santiago Fuensalida, expositor CVET Limarí 2026" />
-            <div>
-              <span>Expositor</span>
-              <h3>Santiago Fuensalida</h3>
-              <p>Sesiones jueves · Tema por confirmar</p>
-            </div>
-          </article>
-          <article class="speaker-card reveal" data-stagger="1">
-            <img src="./assets/speaker-ai-lina-sanz.jpg" alt="Retrato de Lina Sanz, expositora CVET Limarí 2026" />
-            <div>
-              <span>Expositora</span>
-              <h3>Lina Sanz</h3>
-              <p>Sesion viernes · Tema por confirmar</p>
-            </div>
-          </article>
-          <article class="speaker-card reveal" data-stagger="2">
-            <img src="./assets/speaker-ai-enzo-bosco.jpg" alt="Retrato de Enzo Bosco, expositor CVET Limarí 2026" />
-            <div>
-              <span>Expositor</span>
-              <h3>Enzo Bosco</h3>
-              <p>Sesiones jueves · Tema por confirmar</p>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section class="section ticket-section" id="entradas">
-        <div class="section-heading reveal">
-          <span class="eyebrow">Inscripciones abiertas</span>
-          <h2>Elige cómo vivir CVET Limarí 2026.</h2>
-          <p>Elige entre asistir al congreso o vivir la experiencia completa con alojamiento, comidas y actividades con cupos limitados.</p>
-        </div>
-
-        <div class="ticket-layout">
-          <article class="ticket-card reveal">
-            <div class="ticket-top">
-              <span>Preventa</span>
-              <strong>$200.000</strong>
-            </div>
-            <h3>Solo Congreso</h3>
-            <ul>
-              <li>Acceso a ambas jornadas.</li>
-              <li>Coffee breaks.</li>
-              <li>Fiesta oficial del congreso.</li>
-              <li>Ubicaciones por orden de llegada.</li>
-            </ul>
-            <button class="btn btn-primary" data-ticket="Solo Congreso" data-price="200000">
-              <i data-lucide="ticket"></i> Seleccionar
-            </button>
-          </article>
-
-          <article class="ticket-card featured reveal" data-stagger="1">
-            <div class="ticket-top">
-              <span>Todo incluido</span>
-              <strong>$350.000</strong>
-            </div>
-            <h3>Experiencia Completa</h3>
-            <ul>
-              <li>Todo lo incluido en Solo Congreso.</li>
-              <li>1 noche de alojamiento.</li>
-              <li>2 desayunos y 2 almuerzos.</li>
-              <li>Acceso a experiencias con cupos limitados.</li>
-            </ul>
-            <button class="btn btn-primary" data-ticket="Experiencia Completa" data-price="350000">
-              <i data-lucide="sparkles"></i> Seleccionar
-            </button>
-          </article>
-
-        </div>
-      </section>
-
-      <section class="section payment-section" id="pago">
-        <div class="section-heading reveal">
-          <span class="eyebrow">Pago online</span>
-          <h2>Pago online de entradas desde la misma página.</h2>
-          <p>Selecciona tu entrada, revisa el monto y elige el método de pago que más acomode tu inscripción.</p>
-        </div>
-
-        <div class="payment-options reveal">
-          <article>
-            <i data-lucide="credit-card"></i>
-            <h3>Webpay Plus</h3>
-            <p>Opción estándar en Chile para tarjetas de crédito, débito y prepago mediante Transbank.</p>
-          </article>
-          <article>
-            <i data-lucide="workflow"></i>
-            <h3>Flow</h3>
-            <p>Pasarela agregadora útil para operar con distintos medios de pago y conciliación centralizada.</p>
-          </article>
-          <article>
-            <i data-lucide="wallet-cards"></i>
-            <h3>Mercado Pago</h3>
-            <p>Checkout con redirección y medios como tarjetas, dinero en cuenta y transferencias según configuración.</p>
-          </article>
-          <article>
-            <i data-lucide="landmark"></i>
-            <h3>Khipu</h3>
-            <p>Pagos instantáneos por transferencia bancaria, prepago o billeteras compatibles.</p>
-          </article>
-        </div>
-
-        <div class="pass-shop">
-          <div class="pass-list reveal">
-            <button class="pass-card active" type="button" data-pass="Solo Congreso" data-pass-price="200000">
-              <span>Entrada</span>
-              <strong>Solo Congreso</strong>
-              <small>$200.000 CLP</small>
-            </button>
-            <button class="pass-card" type="button" data-pass="Experiencia Completa" data-pass-price="350000">
-              <span>Todo incluido</span>
-              <strong>Experiencia Completa</strong>
-              <small>$350.000 CLP</small>
-            </button>
-          </div>
-
-          <aside class="checkout-panel reveal" data-stagger="2" aria-live="polite">
-            <div class="checkout-head">
-              <span>Checkout de entrada</span>
-              <strong data-selected-pass>Solo Congreso</strong>
-            </div>
-            <div class="checkout-total">
-              <small>Total</small>
-              <strong data-selected-price>$200.000 CLP</strong>
-            </div>
-            <div class="method-list" role="radiogroup" aria-label="Método de pago">
-              <button class="method active" type="button" data-method="Webpay Plus"><i data-lucide="credit-card"></i> Webpay</button>
-              <button class="method" type="button" data-method="Flow"><i data-lucide="workflow"></i> Flow</button>
-              <button class="method" type="button" data-method="Mercado Pago"><i data-lucide="wallet"></i> Mercado Pago</button>
-              <button class="method" type="button" data-method="Khipu"><i data-lucide="landmark"></i> Khipu</button>
-            </div>
-            <button class="btn btn-primary full" type="button" data-open-checkout>
-              <i data-lucide="lock-keyhole"></i> Continuar al pago
-            </button>
-            <p class="checkout-note">La confirmación final de cupo se coordina con la organización del Congreso Veterinario Limarí.</p>
-          </aside>
-        </div>
-      </section>
-
-      <section class="section sponsors-section">
-        <div class="section-heading reveal">
-          <span class="eyebrow">Alianzas</span>
-          <h2>Marcas que confian en el Congreso de las Estrellas.</h2>
-        </div>
-        <div class="sponsor-cloud reveal">
-          <span>Insufarma</span>
-          <span>Purina Pro Plan</span>
-          <span>Vet's</span>
-          <span>Vitanimal</span>
-          <span>Drag Pharma</span>
-          <span>Zoetis</span>
-          <span>Medvet Arom</span>
-          <span>Chemie</span>
-          <span>Datavet</span>
-          <span>MSD Animal Health</span>
-          <span>Biofresh</span>
-          <span>Idexx</span>
-          <span>One Health</span>
-        </div>
-      </section>
-
-      <section class="section contact-section" id="contacto">
-        <div class="contact-copy reveal">
-          <span class="eyebrow">Ovalle Casino & Resort</span>
-          <h2>Aprende bajo las estrellas. Vive el Limarí.</h2>
-          <p>Reserva tu cupo, revisa disponibilidad y confirma condiciones directamente con la organización del evento.</p>
-          <div class="contact-actions">
-            <a class="btn btn-primary" href="https://www.filacero.cl/eventos/congreso-veterinario-limari-2026-en-ovalle" target="_blank" rel="noopener">
-              <i data-lucide="external-link"></i> Comprar en FilaCero
+  <main id="contenido" tabindex="-1">
+    <section class="view home-view is-active" id="inicio" data-view="inicio" aria-labelledby="inicio-titulo">
+      <div class="hero">
+        <div class="hero-media" aria-hidden="true"></div>
+        <div class="hero-copy reveal">
+          <p class="eyebrow">Ovalle · 12 y 13 de noviembre de 2026</p>
+          <h1 id="inicio-titulo">Congreso Veterinario <span>Limarí 2026</span></h1>
+          <p class="hero-kicker">El Congreso de las Estrellas</p>
+          <p class="hero-lead">Dos jornadas para aprender con referentes, conectar con la comunidad veterinaria y vivir una experiencia con identidad regional.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#programa" data-route="programa">
+              <i data-lucide="calendar-days" aria-hidden="true"></i> Ver programa
             </a>
-            <a class="btn btn-secondary" href="mailto:cvetlimari@gmail.com">
-              <i data-lucide="mail"></i> Escribir al congreso
+            <a class="btn btn-ghost" href="#" data-fila-cero target="_blank" rel="noopener noreferrer">
+              <i data-lucide="external-link" aria-hidden="true"></i> Inscribirme en Fila Cero
             </a>
           </div>
-        </div>
-        <div class="map-card reveal" data-stagger="1">
-          <iframe title="Mapa Casino Resort Ovalle" src="https://www.google.com/maps?q=Casino%20Resort%20Ovalle&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-          <a href="https://www.google.com/maps/search/?api=1&query=Casino%20Resort%20Ovalle" target="_blank" rel="noopener">
-            Abrir ruta en Google Maps <i data-lucide="arrow-up-right"></i>
-          </a>
-        </div>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <p>CVET Limarí 2026 · Congreso Veterinario de las Estrellas.</p>
-      <a href="https://www.instagram.com/cvetlimari/" target="_blank" rel="noopener">@cvetlimari</a>
-    </footer>
-  </div>
-
-  <div class="checkout-modal" data-modal aria-hidden="true">
-    <div class="modal-backdrop" data-close-modal></div>
-    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modal-title">
-      <button class="modal-close" type="button" aria-label="Cerrar pago online" data-close-modal>
-        <i data-lucide="x"></i>
-      </button>
-      <span class="eyebrow">Pago online</span>
-      <h2 id="modal-title">Resumen de inscripción</h2>
-      <p data-modal-copy>Revisa los datos de tu entrada antes de continuar al pago.</p>
-      <div class="modal-summary">
-        <div>
-          <small>Entrada</small>
-          <strong data-modal-pass>Solo Congreso</strong>
-        </div>
-        <div>
-          <small>Método</small>
-          <strong data-modal-method>Webpay Plus</strong>
-        </div>
-        <div>
-          <small>Total</small>
-          <strong data-modal-price>$200.000 CLP</strong>
         </div>
       </div>
-      <button class="btn btn-primary full" type="button" data-close-modal>
-        <i data-lucide="check-circle"></i> Entendido
-      </button>
+
+      <div class="event-bar reveal" aria-label="Datos principales del congreso">
+        <div class="event-countdown">
+          <strong data-countdown-days>--</strong>
+          <span>días para el encuentro</span>
+        </div>
+        <div>
+          <i data-lucide="calendar" aria-hidden="true"></i>
+          <span><strong>12 y 13 de noviembre</strong>Dos jornadas presenciales</span>
+        </div>
+        <div>
+          <i data-lucide="map-pin" aria-hidden="true"></i>
+          <span><strong>Casino Ovalle &amp; Resort</strong>Ovalle, Región de Coquimbo</span>
+        </div>
+        <div>
+          <i data-lucide="users-round" aria-hidden="true"></i>
+          <span><strong>4ª versión</strong>Comunidad veterinaria del norte</span>
+        </div>
+      </div>
+
+      <section class="home-intro page-width" aria-labelledby="experiencia-titulo">
+        <div class="section-heading reveal">
+          <p class="eyebrow dark">Una experiencia que trasciende</p>
+          <h2 id="experiencia-titulo">La veterinaria también se encuentra, aprende y crece desde regiones.</h2>
+          <p>CVET Limarí reúne actualización profesional, networking y experiencias locales en un espacio pensado para compartir criterio, conocimiento y comunidad.</p>
+        </div>
+
+        <div class="experience-ledger">
+          <article class="reveal">
+            <span>01</span>
+            <i data-lucide="presentation" aria-hidden="true"></i>
+            <h3>Aprendizaje</h3>
+            <p>Charlas, conversaciones y contenido de alto nivel durante dos jornadas.</p>
+          </article>
+          <article class="reveal" data-stagger="1">
+            <span>02</span>
+            <i data-lucide="network" aria-hidden="true"></i>
+            <h3>Conexión</h3>
+            <p>Espacios para compartir con colegas, expositores y marcas de la industria.</p>
+          </article>
+          <article class="reveal" data-stagger="2">
+            <span>03</span>
+            <i data-lucide="sparkles" aria-hidden="true"></i>
+            <h3>Identidad local</h3>
+            <p>Observatorio, experiencia pisquera y una celebración con sello del Limarí.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="editorial-preview" aria-labelledby="asi-se-vive">
+        <div class="page-width preview-grid">
+          <div class="preview-copy reveal">
+            <p class="eyebrow">Comunidad en movimiento</p>
+            <h2 id="asi-se-vive">Así se vive el Congreso de las Estrellas.</h2>
+            <p>Encuentros que continúan fuera del auditorio: conversación, industria, camaradería y una red profesional que se fortalece en cada edición.</p>
+            <a class="text-link" href="#recuerdos" data-route="recuerdos">Ver recuerdos de ediciones anteriores <i data-lucide="arrow-right" aria-hidden="true"></i></a>
+          </div>
+          <div class="preview-photos reveal" data-stagger="1">
+            <img src="./assets/photos/escenario.jpg" alt="Charla en el escenario del Congreso Veterinario Limarí" />
+            <img src="./assets/photos/encuentro-marcas.jpg" alt="Conversación entre asistentes y una marca en el congreso" loading="lazy" />
+            <img src="./assets/photos/comunidad.jpg" alt="Profesionales compartiendo durante una edición del congreso" loading="lazy" />
+          </div>
+        </div>
+      </section>
+
+      <section class="sponsor-section" aria-labelledby="sponsors-titulo">
+        <div class="page-width sponsor-heading reveal">
+          <div>
+            <p class="eyebrow dark">Alianzas que hacen comunidad</p>
+            <h2 id="sponsors-titulo">Auspiciadores y colaboradores</h2>
+          </div>
+          <div class="sponsor-meta">
+            <p>Marcas y equipos que impulsan el encuentro, el conocimiento y el futuro de la medicina veterinaria.</p>
+            <button class="marquee-control" type="button" title="Pausar movimiento" aria-label="Pausar movimiento de auspiciadores" aria-pressed="false" data-marquee-toggle>
+              <i data-lucide="pause" aria-hidden="true"></i>
+            </button>
+          </div>
+        </div>
+        <div class="logo-marquee reveal" aria-label="Logos de auspiciadores y colaboradores">
+          <div class="logo-track" data-logo-track>
+            <div class="logo-set">
+              <figure><img src="./assets/sponsors/cvet.jpg" alt="C Vet" /></figure>
+              <figure><img src="./assets/sponsors/medvetarom.jpg" alt="Medvetarom" /></figure>
+              <figure><img src="./assets/sponsors/biofresh.jpg" alt="Biofresh" /></figure>
+              <figure><img src="./assets/sponsors/jocaval.jpg" alt="Distribuidora Jocaval" /></figure>
+              <figure><img src="./assets/sponsors/vets.jpg" alt="Veterinary Emergency Total Service" /></figure>
+              <figure><img src="./assets/sponsors/purina-pro-plan.jpg" alt="Purina Pro Plan" /></figure>
+              <figure><img src="./assets/sponsors/idexx-agrovet.jpg" alt="IDEXX Agrovet" /></figure>
+              <figure><img src="./assets/sponsors/datavet.jpg" alt="DataVet" /></figure>
+              <figure><img src="./assets/sponsors/gerolamo.jpg" alt="Gerolamo" /></figure>
+              <figure><img src="./assets/sponsors/drag-pharma.jpg" alt="Drag Pharma" /></figure>
+              <figure><img src="./assets/sponsors/insupharma.jpg" alt="InsuFarma" /></figure>
+              <figure><img src="./assets/sponsors/msd-animal-health.jpg" alt="MSD Animal Health" /></figure>
+              <figure><img src="./assets/sponsors/veterinaria-roco.jpg" alt="Veterinaria Roco" /></figure>
+              <figure><img src="./assets/sponsors/vitanimal.jpg" alt="Vitanimal" /></figure>
+              <figure><img src="./assets/sponsors/simona.jpeg" alt="Simona" /></figure>
+              <figure><img src="./assets/sponsors/zoetis.jpg" alt="Zoetis" /></figure>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <section class="view" id="congreso" data-view="congreso" aria-labelledby="congreso-titulo" hidden>
+      <header class="page-hero congress-hero">
+        <div class="page-hero-copy reveal">
+          <p class="eyebrow">Información del encuentro</p>
+          <h1 id="congreso-titulo">Un congreso profesional con identidad del Limarí.</h1>
+          <p>Aprendizaje, comunidad y experiencias locales en el corazón de la Región de Coquimbo.</p>
+        </div>
+      </header>
+
+      <div class="page-width page-content">
+        <section class="facts-grid" aria-label="Fecha y lugar">
+          <article class="reveal"><i data-lucide="calendar-days"></i><span>Fecha</span><strong>12 y 13 de noviembre de 2026</strong></article>
+          <article class="reveal" data-stagger="1"><i data-lucide="map-pinned"></i><span>Lugar</span><strong>Casino Ovalle &amp; Resort</strong></article>
+          <article class="reveal" data-stagger="2"><i data-lucide="milestone"></i><span>Ciudad</span><strong>Ovalle, Chile</strong></article>
+          <article class="reveal" data-stagger="3"><i data-lucide="star"></i><span>Edición</span><strong>4ª versión</strong></article>
+        </section>
+
+        <section class="congress-story">
+          <div class="story-copy reveal">
+            <p class="eyebrow dark">Lo que nos reúne</p>
+            <h2>Dos días para actualizarse, compartir y construir redes reales.</h2>
+            <p>El Congreso Veterinario Limarí convoca a médicos veterinarios, expositores y representantes de la industria para aprender desde una mirada cercana, práctica e inspiradora.</p>
+            <p>Las jornadas combinan charlas, pausas de networking, visita a stands y actividades que conectan el programa con la cultura y el paisaje del Valle del Limarí.</p>
+            <div class="organizers">
+              <span>Organización</span>
+              <strong>Dr. Matías Morovic · Dr. Rodrigo Barraza</strong>
+            </div>
+          </div>
+          <figure class="story-photo reveal" data-stagger="1">
+            <img src="./assets/photos/auditorio.jpg" alt="Asistentes durante una jornada del Congreso Veterinario Limarí" />
+            <figcaption>Conocimiento que se comparte. Comunidad que permanece.</figcaption>
+          </figure>
+        </section>
+
+        <section class="what-to-expect" aria-labelledby="esperar-titulo">
+          <div class="section-heading reveal">
+            <p class="eyebrow dark">Qué encontrarás</p>
+            <h2 id="esperar-titulo">Una programación pensada más allá del escenario.</h2>
+          </div>
+          <div class="expect-grid">
+            <article class="reveal"><i data-lucide="mic-2"></i><h3>Charlas y casos</h3><p>Bloques con profesionales invitados y espacios de aprendizaje durante ambas jornadas.</p></article>
+            <article class="reveal" data-stagger="1"><i data-lucide="coffee"></i><h3>Networking</h3><p>Coffee breaks, stands y un brunch de negocios para generar vínculos profesionales.</p></article>
+            <article class="reveal" data-stagger="2"><i data-lucide="telescope"></i><h3>Experiencias del valle</h3><p>Observatorio, elaboración y cata de pisco, con cupos sujetos a inscripción previa.</p></article>
+            <article class="reveal" data-stagger="3"><i data-lucide="music-2"></i><h3>Celebración</h3><p>Fiesta del Pisco, música y comunidad para cerrar una jornada bajo las estrellas.</p></article>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <section class="view program-view" id="programa" data-view="programa" aria-labelledby="programa-titulo" hidden>
+      <header class="simple-page-head page-width reveal">
+        <p class="eyebrow dark">Cronograma oficial</p>
+        <h1 id="programa-titulo">Programa del Congreso</h1>
+        <p>Explora cada jornada. Los horarios y títulos pendientes pueden ser modificados por la organización.</p>
+      </header>
+
+      <div class="page-width program-layout">
+        <details class="day-panel reveal" open>
+          <summary><span><small>Jornada 01</small>Jueves 12 de noviembre</span><i data-lucide="chevron-down" aria-hidden="true"></i></summary>
+          <div class="timeline">
+            <div><time>08:30 – 09:20</time><p><strong>Acreditación</strong><small>Entrega de credenciales + regalo.</small></p></div>
+            <div><time>09:20 – 09:30</time><p><strong>Apertura oficial</strong><small>Bienvenida Dr. Matías Morovic.</small></p></div>
+            <div><time>09:30 – 11:00</time><p><strong>Vet's en acción</strong><small>Simulación clínica en vivo.</small></p></div>
+            <div><time>11:00 – 11:45</time><p><strong>Coffee break</strong><small>Visita a stands + networking.</small></p></div>
+            <div><time>11:45 – 12:45</time><p><strong>Charla Dr. Enzo Bosco</strong><small>Tema por confirmar.</small></p></div>
+            <div class="activity"><time>12:00 – 13:00</time><p><strong>Experiencia Pisquera Limarí</strong><small>Elaboración del pisco · Grupo 2 · 20 cupos.</small></p></div>
+            <div><time>12:45 – 13:00</time><p><strong>Charla técnica Vitanimal</strong></p></div>
+            <div><time>13:00 – 14:30</time><p><strong>Almuerzo</strong><small>Tiempo libre.</small></p></div>
+            <div><time>14:30 – 15:30</time><p><strong>Charla Dr. Enzo Bosco</strong><small>Tema por confirmar.</small></p></div>
+            <div><time>15:30 – 15:45</time><p><strong>Charla técnica Zoetis</strong></p></div>
+            <div><time>15:45 – 16:45</time><p><strong>Charla Dr. Santiago Fuensalida</strong><small>Tema por confirmar.</small></p></div>
+            <div class="activity"><time>16:00 – 17:00</time><p><strong>Experiencia Pisquera Limarí</strong><small>Elaboración del pisco · Grupo 2 · 20 cupos.</small></p></div>
+            <div><time>16:45 – 17:30</time><p><strong>Coffee break</strong><small>Visita a stands + networking.</small></p></div>
+            <div><time>17:30 – 17:45</time><p><strong>Charla técnica Drag Pharma</strong></p></div>
+            <div><time>17:45 – 18:45</time><p><strong>Charla Dr. Santiago Fuensalida</strong><small>Tema por confirmar.</small></p></div>
+            <div><time>18:45 – 19:00</time><p><strong>Foto oficial</strong><small>Congreso de las Estrellas.</small></p></div>
+            <div class="activity"><time>19:00 – 20:00</time><p><strong>Cata de pisco</strong><small>50 cupos · Experiencia Limarí.</small></p></div>
+            <div class="activity"><time>20:00 – 21:00</time><p><strong>Observatorio</strong><small>Experiencia Limarí.</small></p></div>
+            <div class="activity"><time>21:00 – 02:00</time><p><strong>Fiesta del Pisco</strong><small>Música, networking, regalos y celebración.</small></p></div>
+          </div>
+        </details>
+
+        <details class="day-panel reveal" data-stagger="1" open>
+          <summary><span><small>Jornada 02</small>Viernes 13 de noviembre</span><i data-lucide="chevron-down" aria-hidden="true"></i></summary>
+          <div class="timeline">
+            <div><time>09:30 – 10:30</time><p><strong>Charla Dra. Lina Sanz</strong><small>Tema por confirmar.</small></p></div>
+            <div><time>10:30 – 11:30</time><p><strong>Charla Dra. Christel Cuneo</strong><small>Tema por confirmar.</small></p></div>
+            <div><time>11:30 – 12:15</time><p><strong>Coffee break</strong><small>Visita a stands + networking.</small></p></div>
+            <div class="activity"><time>12:00 – 13:00</time><p><strong>Experiencia Pisquera Limarí</strong><small>Elaboración del pisco · Grupo 3 · 20 cupos.</small></p></div>
+            <div><time>12:15 – 13:15</time><p><strong>Charla Dr. Carlos Ruiz</strong><small>Tema por confirmar.</small></p></div>
+            <div><time>13:15 – 13:30</time><p><strong>Charla técnica MSD</strong></p></div>
+            <div><time>13:30 – 14:30</time><p><strong>Brunch de negocios</strong><small>Networking y alianzas.</small></p></div>
+            <div><time>14:30 – 15:30</time><p><strong>Charla Dra. Christel Cuneo</strong><small>Tema por confirmar.</small></p></div>
+            <div><time>15:30 – 15:45</time><p><strong>Charla técnica sponsor</strong></p></div>
+            <div><time>15:45 – 16:45</time><p><strong>Charla César Villalta</strong><small>Tema por confirmar.</small></p></div>
+            <div><time>16:45 – 17:15</time><p><strong>Cierre y agradecimientos</strong><small>Dr. Rodrigo Barraza.</small></p></div>
+          </div>
+        </details>
+      </div>
+
+      <section class="program-note page-width reveal" aria-labelledby="actividades-titulo">
+        <div>
+          <p class="eyebrow">Actividades destacadas</p>
+          <h2 id="actividades-titulo">El Valle del Limarí también forma parte del programa.</h2>
+        </div>
+        <ul>
+          <li><i data-lucide="grape"></i><span><strong>Experiencia pisquera</strong>3 grupos de 20 cupos.</span></li>
+          <li><i data-lucide="wine"></i><span><strong>Cata de pisco</strong>50 cupos disponibles.</span></li>
+          <li><i data-lucide="telescope"></i><span><strong>Observatorio</strong>Cupos limitados.</span></li>
+          <li><i data-lucide="music"></i><span><strong>Fiesta del Pisco</strong>Música y networking.</span></li>
+        </ul>
+      </section>
+    </section>
+
+    <section class="view speakers-view" id="expositores" data-view="expositores" aria-labelledby="expositores-titulo" hidden>
+      <header class="simple-page-head page-width reveal">
+        <p class="eyebrow dark">Profesionales invitados</p>
+        <h1 id="expositores-titulo">Voces que compartirán experiencia y conocimiento.</h1>
+        <p>Conoce a los expositores anunciados para CVET Limarí 2026. Los títulos específicos de algunas charlas aún están por confirmar.</p>
+      </header>
+
+      <div class="page-width speakers-grid">
+        <article class="speaker-card reveal">
+          <img src="./assets/speaker-ai-cesar-villalta.jpg" alt="César Villalta" />
+          <div><span>Expositor</span><h2>César Villalta</h2><p>Emergencia y cuidados intensivos</p><small>Viernes 13</small></div>
+        </article>
+        <article class="speaker-card reveal" data-stagger="1">
+          <img src="./assets/speaker-ai-carlos-ruiz.jpg" alt="Carlos Ruiz" />
+          <div><span>Expositor</span><h2>Carlos Ruiz</h2><p>Anestesia y analgesia</p><small>Viernes 13</small></div>
+        </article>
+        <article class="speaker-card reveal" data-stagger="2">
+          <img src="./assets/speaker-ai-christel-cuneo.jpg" alt="Christel Cuneo" />
+          <div><span>Expositora</span><h2>Christel Cuneo</h2><p>Odontología veterinaria</p><small>Viernes 13</small></div>
+        </article>
+        <article class="speaker-card reveal">
+          <img src="./assets/speaker-ai-santiago-fuensalida.jpg" alt="Santiago Fuensalida" />
+          <div><span>Expositor</span><h2>Santiago Fuensalida</h2><p>Anestesiología y analgesia</p><small>Jueves 12</small></div>
+        </article>
+        <article class="speaker-card reveal" data-stagger="1">
+          <img src="./assets/speaker-ai-lina-sanz.jpg" alt="Lina Sanz" />
+          <div><span>Expositora</span><h2>Lina Sanz</h2><p>Medicina felina</p><small>Viernes 13</small></div>
+        </article>
+        <article class="speaker-card reveal" data-stagger="2">
+          <img src="./assets/speaker-ai-enzo-bosco.jpg" alt="Enzo Bosco" />
+          <div><span>Expositor</span><h2>Enzo Bosco</h2><p>Neurología</p><small>Jueves 12</small></div>
+        </article>
+      </div>
+
+      <section class="speaker-cta page-width reveal">
+        <div><p class="eyebrow">Planifica tu experiencia</p><h2>Revisa los horarios de cada expositor.</h2></div>
+        <a class="btn btn-primary" href="#programa" data-route="programa"><i data-lucide="calendar-search"></i> Ir al programa</a>
+      </section>
+    </section>
+
+    <section class="view memories-view" id="recuerdos" data-view="recuerdos" aria-labelledby="recuerdos-titulo" hidden>
+      <header class="simple-page-head page-width reveal">
+        <p class="eyebrow dark">Historia compartida</p>
+        <h1 id="recuerdos-titulo">Recuerdos de nuestras ediciones.</h1>
+        <p>Una mirada a las charlas, encuentros y momentos que han construido la comunidad del Congreso Veterinario Limarí.</p>
+      </header>
+
+      <div class="gallery page-width" data-gallery>
+        <button class="gallery-item wide reveal" type="button" data-gallery-src="./assets/photos/escenario.jpg" data-gallery-caption="Charlas y conversación profesional en el escenario.">
+          <img src="./assets/photos/escenario.jpg" alt="Expositora durante una charla del congreso" />
+          <span>Charlas que conectan</span>
+        </button>
+        <button class="gallery-item reveal" type="button" data-gallery-src="./assets/photos/auditorio.jpg" data-gallery-caption="La comunidad veterinaria participando de una jornada.">
+          <img src="./assets/photos/auditorio.jpg" alt="Asistentes en el auditorio" loading="lazy" />
+          <span>Comunidad presente</span>
+        </button>
+        <button class="gallery-item tall reveal" data-stagger="1" type="button" data-gallery-src="./assets/photos/charla-magistral.jpg" data-gallery-caption="Expositores compartiendo experiencia y criterio clínico.">
+          <img src="./assets/photos/charla-magistral.jpg" alt="Expositor en una charla magistral" loading="lazy" />
+          <span>Conocimiento aplicado</span>
+        </button>
+        <button class="gallery-item reveal" data-stagger="1" type="button" data-gallery-src="./assets/photos/stands.jpg" data-gallery-caption="Marcas y profesionales reunidos en la zona de stands.">
+          <img src="./assets/photos/stands.jpg" alt="Stand de una marca colaboradora" loading="lazy" />
+          <span>Industria y encuentro</span>
+        </button>
+        <button class="gallery-item wide reveal" type="button" data-gallery-src="./assets/photos/encuentro-marcas.jpg" data-gallery-caption="Conversaciones que continúan fuera del auditorio.">
+          <img src="./assets/photos/encuentro-marcas.jpg" alt="Conversación en un stand del congreso" loading="lazy" />
+          <span>Redes profesionales</span>
+        </button>
+        <button class="gallery-item reveal" data-stagger="1" type="button" data-gallery-src="./assets/photos/participacion.jpg" data-gallery-caption="Participación activa durante las jornadas.">
+          <img src="./assets/photos/participacion.jpg" alt="Asistentes participando durante una charla" loading="lazy" />
+          <span>Preguntas y participación</span>
+        </button>
+        <button class="gallery-item reveal" data-stagger="2" type="button" data-gallery-src="./assets/photos/comunidad.jpg" data-gallery-caption="Encuentros que fortalecen la comunidad veterinaria.">
+          <img src="./assets/photos/comunidad.jpg" alt="Profesionales compartiendo al cierre" loading="lazy" />
+          <span>Vínculos que permanecen</span>
+        </button>
+        <button class="gallery-item wide reveal" type="button" data-gallery-src="./assets/photos/auspiciador-evento.jpg" data-gallery-caption="Auspiciadores presentes en la experiencia del congreso.">
+          <img src="./assets/photos/auspiciador-evento.jpg" alt="Representante de una marca en su stand" loading="lazy" />
+          <span>Alianzas del congreso</span>
+        </button>
+        <button class="gallery-item reveal" data-stagger="1" type="button" data-gallery-src="./assets/photos/casino-ovalle.jpg" data-gallery-caption="Casino Ovalle & Resort, sede del encuentro.">
+          <img src="./assets/photos/casino-ovalle.jpg" alt="Exterior de Casino Ovalle & Resort" loading="lazy" />
+          <span>Nuestra sede en Ovalle</span>
+        </button>
+      </div>
+    </section>
+
+    <section class="view registration-view" id="inscripcion" data-view="inscripcion" aria-labelledby="inscripcion-titulo" hidden>
+      <header class="registration-head">
+        <div class="page-width reveal">
+          <p class="eyebrow">Inscripciones abiertas</p>
+          <h1 id="inscripcion-titulo">Elige cómo vivir CVET Limarí 2026.</h1>
+          <p>Conoce las alternativas disponibles y completa tu inscripción de forma segura en Fila Cero.</p>
+        </div>
+      </header>
+
+      <div class="page-width registration-content">
+        <div class="option-grid">
+          <article class="option-card reveal">
+            <div class="option-icon"><i data-lucide="badge-check"></i></div>
+            <p class="eyebrow dark">100% asistencia</p>
+            <h2>Solo Congreso</h2>
+            <p class="option-description">Para quienes quieren concentrar su experiencia en las dos jornadas del programa oficial.</p>
+            <h3>Incluye</h3>
+            <ul>
+              <li><i data-lucide="check"></i> Acceso a ambas jornadas.</li>
+              <li><i data-lucide="check"></i> Coffee breaks.</li>
+              <li><i data-lucide="check"></i> Fiesta oficial del congreso.</li>
+            </ul>
+            <a class="btn btn-primary" href="#" data-fila-cero target="_blank" rel="noopener noreferrer"><i data-lucide="external-link"></i> Ver alternativa en Fila Cero</a>
+          </article>
+
+          <article class="option-card featured reveal" data-stagger="1">
+            <div class="option-icon"><i data-lucide="stars"></i></div>
+            <p class="eyebrow">100% experiencia</p>
+            <h2>Experiencia Completa</h2>
+            <p class="option-description">Para quienes quieren sumar alojamiento y comidas a su participación en el congreso.</p>
+            <h3>Incluye</h3>
+            <ul>
+              <li><i data-lucide="check"></i> Todo lo incluido en Solo Congreso.</li>
+              <li><i data-lucide="check"></i> 1 noche de alojamiento.</li>
+              <li><i data-lucide="check"></i> 2 desayunos.</li>
+              <li><i data-lucide="check"></i> 2 almuerzos.</li>
+            </ul>
+            <a class="btn btn-light" href="#" data-fila-cero target="_blank" rel="noopener noreferrer"><i data-lucide="external-link"></i> Ver alternativa en Fila Cero</a>
+          </article>
+        </div>
+
+        <aside class="fila-cero-band reveal">
+          <div>
+            <i data-lucide="shield-check" aria-hidden="true"></i>
+            <span><strong>Inscripción en Fila Cero</strong>Revisa disponibilidad y completa la compra en la plataforma oficial del evento.</span>
+          </div>
+          <a class="btn btn-primary" href="#" data-fila-cero target="_blank" rel="noopener noreferrer">Ir a Fila Cero <i data-lucide="arrow-up-right"></i></a>
+        </aside>
+
+        <section class="faq-section" aria-labelledby="faq-titulo">
+          <div class="section-heading reveal">
+            <p class="eyebrow dark">Información útil</p>
+            <h2 id="faq-titulo">Preguntas frecuentes</h2>
+          </div>
+          <div class="faq-list">
+            <details class="reveal"><summary>¿Dónde se realiza el congreso?<i data-lucide="chevron-down"></i></summary><p>En Casino Ovalle &amp; Resort, ciudad de Ovalle, Región de Coquimbo.</p></details>
+            <details class="reveal" data-stagger="1"><summary>¿Cuándo se realiza?<i data-lucide="chevron-down"></i></summary><p>Las jornadas oficiales están programadas para el jueves 12 y viernes 13 de noviembre de 2026.</p></details>
+            <details class="reveal" data-stagger="2"><summary>¿Cómo completo mi inscripción?<i data-lucide="chevron-down"></i></summary><p>Todos los botones de inscripción te llevan a Fila Cero, la plataforma oficial donde podrás revisar disponibilidad y continuar con la compra.</p></details>
+            <details class="reveal" data-stagger="3"><summary>¿El programa puede cambiar?<i data-lucide="chevron-down"></i></summary><p>Sí. La organización puede modificar horarios y confirmar posteriormente los títulos que aún aparecen pendientes.</p></details>
+          </div>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="page-width footer-grid">
+      <div class="footer-brand">
+        <img src="./assets/logo-cvet-limari.jpg" alt="Logo Congreso Veterinario Limarí" />
+        <p>Congreso Veterinario Limarí 2026<br />El Congreso de las Estrellas.</p>
+      </div>
+      <div>
+        <span>Contacto</span>
+        <a href="mailto:cvetlimari@gmail.com">cvetlimari@gmail.com</a>
+        <a href="https://www.instagram.com/cvetlimari/" target="_blank" rel="noopener noreferrer">@cvetlimari</a>
+      </div>
+      <div>
+        <span>Evento</span>
+        <a href="#programa" data-route="programa">Programa</a>
+        <a href="#expositores" data-route="expositores">Expositores</a>
+        <a href="#" data-fila-cero target="_blank" rel="noopener noreferrer">Inscripción en Fila Cero</a>
+      </div>
+    </div>
+    <div class="page-width footer-bottom">
+      <span>CVET Limarí 2026</span>
+      <span>Ovalle · Región de Coquimbo</span>
+    </div>
+  </footer>
+
+  <div class="lightbox" data-lightbox aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="lightbox-caption">
+    <button class="lightbox-backdrop" type="button" aria-label="Cerrar galería" data-lightbox-close></button>
+    <div class="lightbox-content">
+      <button class="icon-button lightbox-close" type="button" aria-label="Cerrar" data-lightbox-close><i data-lucide="x"></i></button>
+      <button class="icon-button lightbox-prev" type="button" aria-label="Fotografía anterior" data-lightbox-prev><i data-lucide="chevron-left"></i></button>
+      <figure>
+        <img alt="" data-lightbox-image />
+        <figcaption id="lightbox-caption" data-lightbox-caption></figcaption>
+      </figure>
+      <button class="icon-button lightbox-next" type="button" aria-label="Fotografía siguiente" data-lightbox-next><i data-lucide="chevron-right"></i></button>
     </div>
   </div>
 
   <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
-  <script src="./script.js"></script>
+  <script src="./script.js?v=2"></script>
 </body>
 </html>

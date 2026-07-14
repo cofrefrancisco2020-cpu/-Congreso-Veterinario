@@ -1,151 +1,226 @@
-const formatCLP = (value) =>
-  new Intl.NumberFormat("es-CL", {
-    style: "currency",
-    currency: "CLP",
-    maximumFractionDigits: 0,
-  }).format(Number(value));
+const SITE_CONFIG = Object.freeze({
+  filaCeroUrl: "https://www.filacero.cl/eventos/congreso-veterinario-limari-2026-en-ovalle",
+  eventDate: "2026-11-12T09:00:00-03:00",
+});
 
 const header = document.querySelector("[data-header]");
 const nav = document.querySelector("[data-nav]");
 const navToggle = document.querySelector("[data-nav-toggle]");
+const views = [...document.querySelectorAll("[data-view]")];
+const routeLinks = [...document.querySelectorAll("[data-route]")];
+const validRoutes = new Set(views.map((view) => view.dataset.view));
 
 if (window.lucide) {
   window.lucide.createIcons();
 }
 
+document.querySelectorAll("[data-fila-cero]").forEach((link) => {
+  link.href = SITE_CONFIG.filaCeroUrl;
+});
+
 const setHeaderState = () => {
-  header?.classList.toggle("is-scrolled", window.scrollY > 16);
+  header?.classList.toggle("is-scrolled", window.scrollY > 12);
 };
 
 setHeaderState();
 window.addEventListener("scroll", setHeaderState, { passive: true });
 
+const setMenuIcon = (isOpen) => {
+  if (!navToggle) return;
+  navToggle.innerHTML = `<i data-lucide="${isOpen ? "x" : "menu"}" aria-hidden="true"></i>`;
+  if (window.lucide) window.lucide.createIcons();
+};
+
+const closeMenu = () => {
+  nav?.classList.remove("is-open");
+  navToggle?.setAttribute("aria-expanded", "false");
+  document.body.classList.remove("nav-open");
+  setMenuIcon(false);
+};
+
 navToggle?.addEventListener("click", () => {
-  const isOpen = nav?.classList.toggle("is-open");
-  navToggle.setAttribute("aria-expanded", String(Boolean(isOpen)));
-  const icon = navToggle.querySelector("svg");
-  if (icon && window.lucide) {
-    navToggle.innerHTML = isOpen ? '<i data-lucide="x"></i>' : '<i data-lucide="menu"></i>';
-    window.lucide.createIcons();
-  }
+  const isOpen = nav?.classList.toggle("is-open") ?? false;
+  navToggle.setAttribute("aria-expanded", String(isOpen));
+  document.body.classList.toggle("nav-open", isOpen);
+  setMenuIcon(isOpen);
 });
 
-nav?.querySelectorAll("a").forEach((link) => {
-  link.addEventListener("click", () => {
-    nav.classList.remove("is-open");
-    navToggle?.setAttribute("aria-expanded", "false");
-    if (navToggle && window.lucide) {
-      navToggle.innerHTML = '<i data-lucide="menu"></i>';
-      window.lucide.createIcons();
+const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+const revealObserver = "IntersectionObserver" in window
+  ? new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add("is-visible");
+          revealObserver.unobserve(entry.target);
+        });
+      },
+      { threshold: 0.12, rootMargin: "0px 0px -35px 0px" }
+    )
+  : null;
+
+const observeReveals = (scope) => {
+  const items = scope.querySelectorAll(".reveal");
+  items.forEach((item) => {
+    revealObserver?.unobserve(item);
+    item.classList.remove("is-visible");
+  });
+
+  if (!revealObserver || reduceMotion.matches) {
+    items.forEach((item) => item.classList.add("is-visible"));
+    return;
+  }
+
+  window.requestAnimationFrame(() => {
+    items.forEach((item) => revealObserver.observe(item));
+  });
+};
+
+const getRoute = () => {
+  const requested = window.location.hash.replace(/^#/, "");
+  return validRoutes.has(requested) ? requested : "inicio";
+};
+
+const showRoute = (route, { resetScroll = true } = {}) => {
+  const safeRoute = validRoutes.has(route) ? route : "inicio";
+  let activeView = null;
+
+  views.forEach((view) => {
+    const isActive = view.dataset.view === safeRoute;
+    view.hidden = !isActive;
+    view.classList.toggle("is-active", isActive);
+    if (isActive) activeView = view;
+  });
+
+  routeLinks.forEach((link) => {
+    if (link.closest("[data-nav]") && link.dataset.route === safeRoute) {
+      link.setAttribute("aria-current", "page");
+    } else {
+      link.removeAttribute("aria-current");
+    }
+  });
+
+  closeMenu();
+  if (resetScroll) window.scrollTo({ top: 0, behavior: "auto" });
+  if (activeView) observeReveals(activeView);
+
+  const activeHeading = activeView?.querySelector("h1")?.textContent?.trim();
+  document.title = activeHeading
+    ? `${activeHeading} | CVET Limarí 2026`
+    : "Congreso Veterinario Limarí 2026";
+};
+
+routeLinks.forEach((link) => {
+  link.addEventListener("click", (event) => {
+    const route = link.dataset.route;
+    if (!route || !validRoutes.has(route)) return;
+
+    if (getRoute() === route) {
+      event.preventDefault();
+      showRoute(route);
     }
   });
 });
 
-const revealItems = document.querySelectorAll(".reveal");
+window.addEventListener("hashchange", () => showRoute(getRoute()));
 
-if ("IntersectionObserver" in window) {
-  const revealObserver = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("is-visible");
-          revealObserver.unobserve(entry.target);
-        }
-      });
-    },
-    { threshold: 0.14, rootMargin: "0px 0px -42px 0px" }
-  );
-
-  revealItems.forEach((item) => revealObserver.observe(item));
-} else {
-  revealItems.forEach((item) => item.classList.add("is-visible"));
+if (!window.location.hash || !validRoutes.has(getRoute())) {
+  window.history.replaceState(null, "", "#inicio");
 }
+showRoute(getRoute(), { resetScroll: false });
 
 const countdownDays = document.querySelector("[data-countdown-days]");
-const eventDate = new Date("2026-11-12T09:00:00-03:00").getTime();
+const eventTimestamp = new Date(SITE_CONFIG.eventDate).getTime();
 
 const updateCountdown = () => {
   if (!countdownDays) return;
-  const distance = eventDate - Date.now();
-  const days = Math.max(0, Math.ceil(distance / (1000 * 60 * 60 * 24)));
+  const difference = eventTimestamp - Date.now();
+  const days = Math.max(0, Math.ceil(difference / 86400000));
   countdownDays.textContent = String(days);
 };
 
 updateCountdown();
-window.setInterval(updateCountdown, 1000 * 60 * 30);
+window.setInterval(updateCountdown, 30 * 60 * 1000);
 
-const selectedPass = document.querySelector("[data-selected-pass]");
-const selectedPrice = document.querySelector("[data-selected-price]");
-const modalPass = document.querySelector("[data-modal-pass]");
-const modalPrice = document.querySelector("[data-modal-price]");
-const modalMethod = document.querySelector("[data-modal-method]");
-const modalCopy = document.querySelector("[data-modal-copy]");
-const modal = document.querySelector("[data-modal]");
-let currentPass = selectedPass?.textContent || "Solo Congreso";
-let currentPrice = 200000;
-let currentMethod = "Webpay Plus";
+const logoTrack = document.querySelector("[data-logo-track]");
+const logoSet = logoTrack?.querySelector(".logo-set");
 
-const updateCheckout = () => {
-  const formatted = `${formatCLP(currentPrice)} CLP`;
-  if (selectedPass) selectedPass.textContent = currentPass;
-  if (selectedPrice) selectedPrice.textContent = formatted;
-  if (modalPass) modalPass.textContent = currentPass;
-  if (modalPrice) modalPrice.textContent = formatted;
-  if (modalMethod) modalMethod.textContent = currentMethod;
-  if (modalCopy) {
-    modalCopy.textContent = `Revisa el resumen de tu entrada ${currentPass} usando ${currentMethod} antes de continuar con la inscripción.`;
-  }
+if (logoTrack && logoSet && logoTrack.children.length === 1) {
+  const duplicate = logoSet.cloneNode(true);
+  duplicate.setAttribute("aria-hidden", "true");
+  logoTrack.appendChild(duplicate);
+}
+
+const marqueeToggle = document.querySelector("[data-marquee-toggle]");
+
+marqueeToggle?.addEventListener("click", () => {
+  const isPaused = logoTrack?.classList.toggle("is-paused") ?? false;
+  marqueeToggle.setAttribute("aria-pressed", String(isPaused));
+  marqueeToggle.setAttribute("aria-label", `${isPaused ? "Reanudar" : "Pausar"} movimiento de auspiciadores`);
+  marqueeToggle.title = `${isPaused ? "Reanudar" : "Pausar"} movimiento`;
+  marqueeToggle.innerHTML = `<i data-lucide="${isPaused ? "play" : "pause"}" aria-hidden="true"></i>`;
+  if (window.lucide) window.lucide.createIcons();
+});
+
+const galleryItems = [...document.querySelectorAll("[data-gallery-src]")];
+const lightbox = document.querySelector("[data-lightbox]");
+const lightboxImage = document.querySelector("[data-lightbox-image]");
+const lightboxCaption = document.querySelector("[data-lightbox-caption]");
+let activeGalleryIndex = 0;
+let galleryTrigger = null;
+
+const renderLightbox = () => {
+  const item = galleryItems[activeGalleryIndex];
+  if (!item || !lightboxImage || !lightboxCaption) return;
+  const preview = item.querySelector("img");
+  lightboxImage.src = item.dataset.gallerySrc || "";
+  lightboxImage.alt = preview?.alt || "Fotografía del Congreso Veterinario Limarí";
+  lightboxCaption.textContent = item.dataset.galleryCaption || "";
 };
 
-document.querySelectorAll(".pass-card").forEach((card) => {
-  card.addEventListener("click", () => {
-    document.querySelectorAll(".pass-card").forEach((item) => item.classList.remove("active"));
-    card.classList.add("active");
-    currentPass = card.dataset.pass || currentPass;
-    currentPrice = Number(card.dataset.passPrice || currentPrice);
-    updateCheckout();
-  });
-});
-
-document.querySelectorAll(".method").forEach((button) => {
-  button.addEventListener("click", () => {
-    document.querySelectorAll(".method").forEach((item) => item.classList.remove("active"));
-    button.classList.add("active");
-    currentMethod = button.dataset.method || currentMethod;
-    updateCheckout();
-  });
-});
-
-document.querySelectorAll("[data-ticket]").forEach((button) => {
-  button.addEventListener("click", () => {
-    currentPass = button.dataset.ticket || currentPass;
-    currentPrice = Number(button.dataset.price || currentPrice);
-    currentMethod = "Webpay Plus";
-    updateCheckout();
-    openModal();
-  });
-});
-
-const openModal = () => {
-  updateCheckout();
-  modal?.classList.add("is-open");
-  modal?.setAttribute("aria-hidden", "false");
-  document.body.classList.add("modal-open");
+const openLightbox = (index, trigger) => {
+  if (!lightbox) return;
+  activeGalleryIndex = index;
+  galleryTrigger = trigger;
+  renderLightbox();
+  lightbox.classList.add("is-open");
+  lightbox.setAttribute("aria-hidden", "false");
+  document.body.classList.add("lightbox-open");
+  lightbox.querySelector("[data-lightbox-close]")?.focus();
 };
 
-const closeModal = () => {
-  modal?.classList.remove("is-open");
-  modal?.setAttribute("aria-hidden", "true");
-  document.body.classList.remove("modal-open");
+const closeLightbox = () => {
+  if (!lightbox?.classList.contains("is-open")) return;
+  lightbox.classList.remove("is-open");
+  lightbox.setAttribute("aria-hidden", "true");
+  document.body.classList.remove("lightbox-open");
+  galleryTrigger?.focus();
 };
 
-document.querySelector("[data-open-checkout]")?.addEventListener("click", openModal);
-document.querySelectorAll("[data-close-modal]").forEach((button) => {
-  button.addEventListener("click", closeModal);
+const moveLightbox = (direction) => {
+  if (!galleryItems.length) return;
+  activeGalleryIndex = (activeGalleryIndex + direction + galleryItems.length) % galleryItems.length;
+  renderLightbox();
+};
+
+galleryItems.forEach((item, index) => {
+  item.addEventListener("click", () => openLightbox(index, item));
 });
+
+document.querySelectorAll("[data-lightbox-close]").forEach((button) => {
+  button.addEventListener("click", closeLightbox);
+});
+
+document.querySelector("[data-lightbox-prev]")?.addEventListener("click", () => moveLightbox(-1));
+document.querySelector("[data-lightbox-next]")?.addEventListener("click", () => moveLightbox(1));
 
 window.addEventListener("keydown", (event) => {
-  if (event.key === "Escape") closeModal();
+  if (event.key === "Escape") {
+    if (lightbox?.classList.contains("is-open")) closeLightbox();
+    else closeMenu();
+  }
+  if (!lightbox?.classList.contains("is-open")) return;
+  if (event.key === "ArrowLeft") moveLightbox(-1);
+  if (event.key === "ArrowRight") moveLightbox(1);
 });
-
-updateCheckout();

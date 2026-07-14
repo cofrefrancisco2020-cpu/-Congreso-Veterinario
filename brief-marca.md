@@ -1,146 +1,120 @@
-# Brief de marca - Congreso Veterinario Limari 2026
+# Brief de marca - Congreso Veterinario Limarí 2026
 
-Fecha de revision: 03 de julio de 2026.
+Fecha de actualización: 14 de julio de 2026.
 
 ## Fuentes revisadas
 
-- Sitio de venta informado por el usuario: https://www.filacero.cl/eventos/congreso-veterinario-limari-2026-en-ovalle
-- Instagram oficial: https://www.instagram.com/cvetlimari/
-- Capturas entregadas por el usuario de publicaciones oficiales del Instagram del congreso.
-- Publicacion publica de Rodrigo Barraza Ramos en LinkedIn sobre CVET Limari 2026.
-- Fuentes de referencia para pagos: Transbank Webpay, Flow, Mercado Pago y Khipu.
+- Página oficial de venta indicada por el usuario en Fila Cero.
+- Instagram oficial `@cvetlimari`.
+- Capturas oficiales entregadas por el usuario.
+- Archivo fotográfico entregado en `archivos nueva pag/todas`.
+- Logos entregados en `archivos nueva pag/iconos auspiciadores`.
 
-## Datos visibles
+## Información comprobada
 
-- Nombre: Congreso Veterinario Limari / CVET Limari 2026.
+- Nombre: Congreso Veterinario Limarí / CVET Limarí 2026.
 - Concepto: El Congreso de las Estrellas.
-- Rubro: congreso veterinario para medicos veterinarios.
 - Fecha: 12 y 13 de noviembre de 2026.
 - Lugar: Casino Ovalle & Resort, Ovalle, Chile.
-- Version: 4a version.
-- Instagram visible al momento de revision: 2.101 seguidores, 844 siguiendo y 176 publicaciones.
-- Email visible en grafica de cronograma: cvetlimari@gmail.com.
+- Edición: cuarta versión.
+- Contacto publicado: `cvetlimari@gmail.com`.
+- Organizadores visibles en material oficial: Dr. Matías Morovic y Dr. Rodrigo Barraza.
 
-## Propuesta y oferta detectada
+## Dirección visual
 
-- Congreso presencial de dos dias.
-- Charlas con referentes nacionales.
-- Coffee breaks, networking, stands y brunch de negocios.
-- Experiencia pisquera Limari, cata de pisco y tour/actividad asociada.
-- Observatorio bajo uno de los cielos destacados del norte de Chile.
-- Fiesta del Pisco y comunidad veterinaria.
-- Entradas:
-  - Solo Congreso: $200.000 preventa.
-  - Experiencia Completa: $350.000 todo incluido.
+La identidad combina un cielo nocturno profundo con azul institucional, celeste y cobre. La versión 2 reduce los recursos decorativos y utiliza fotografía documental real para comunicar comunidad, trayectoria y participación.
 
-## Identidad visual observada
+Paleta aplicada:
 
-- Estilo nocturno, cientifico y astronomico.
-- Fondo azul profundo con estrellas, observatorio y brillos sutiles.
-- Acentos dorados/naranjos para fechas, botones y momentos destacados.
-- Azul electrico para el ano 2026 y elementos de enfasis.
-- Fotografia/editorial de profesionales veterinarios con estetica de congreso premium.
+- Azul noche: `#061427`.
+- Azul institucional: `#0B60C8`.
+- Celeste: `#4FB5DE`.
+- Cobre: `#D78F3D`.
+- Coral de apoyo: `#E56959`.
+- Papel claro: `#F4F8FB`.
 
-## Paleta sugerida
+Tipografías:
 
-- Azul noche: #071020.
-- Azul institucional: #0e2854.
-- Azul electrico: #0d64d8.
-- Celeste acento: #38bdf8.
-- Dorado: #d89a3a.
-- Ambar: #f2c166.
-- Coral suave para acentos secundarios: #f9736b.
+- Sora para títulos.
+- Source Sans 3 para lectura.
+- IBM Plex Mono para fechas, etiquetas y datos.
 
-## Mensajes recurrentes
+## Arquitectura de navegación
 
-- "La veterinaria no pasa solo en Santiago."
-- "Congreso de las Estrellas."
-- "Aprende, comparte, conectate, transforma."
-- "Vive la experiencia."
-- "Desde regiones, haciendo historia veterinaria."
-- Enfoque en comunidad, ciencia aplicada, experiencias locales y orgullo regional.
+Se mantuvo la tecnología estática del proyecto porque no existía una necesidad técnica que justificara migrar a otro framework.
 
-## Prueba social y confianza usada
+La antigua página continua se reemplazó por vistas independientes activadas desde el menú:
 
-- Comunidad visible de Instagram: 2.101 seguidores.
-- 4a version del congreso.
-- Expositores y profesionales visibles en publicaciones oficiales.
-- Marcas auspiciadoras y colaboradoras detectadas: Insufarma, Purina Pro Plan, VET'S, Vitanimal, Drag Pharma, Zoetis, Medvet Arom, Chemie, Datavet, MSD Animal Health, Biofresh, Idexx, One Health, entre otras.
-- Actividades diferenciales: observatorio, experiencia pisquera, cata, Fiesta del Pisco y networking.
+- Inicio.
+- Congreso.
+- Programa.
+- Expositores.
+- Recuerdos.
+- Inscripción.
 
-## Imagenes usadas y transformaciones
+Cada ruta oculta las demás vistas, muestra el estado activo en el menú y conserva compatibilidad con la navegación del navegador. De esta manera el sitio deja de percibirse como una landing extensa.
 
-- `logo-cvet-limari.jpg`: recorte limpio de la marca desde captura oficial, sin interfaz de Instagram.
-- `hero-grupo-cvet-ai.jpg`: hero generado con IA desde captura de la pagina de venta/FilaCero donde aparecia una foto grupal del congreso. Se elimino el formato de flyer, textos superiores, fecha, banners, botones y pie de venta para dejar una foto horizontal de comunidad/experiencia real.
-- `actividad-observatorio-ai.jpg`: imagen generada/mejorada con IA a partir de referencia visual de observatorio y busqueda contextual de la zona de Ovalle/Limari.
-- `actividad-cata-pisco-ai.jpg`: imagen generada/mejorada con IA a partir de la referencia de cata/experiencia pisquera visible en la grafica de precios.
-- `speaker-ai-*.jpg`: retratos generados con IA usando como referencia las graficas oficiales de expositores. Se evitaron textos, logos, interfaz social y formato de flyer para crear tarjetas editoriales propias de la web.
+## Fotografías incorporadas
 
-## Imagenes generadas con IA
+Las imágenes se seleccionaron por claridad, composición y utilidad narrativa. Los originales se redimensionaron y comprimieron para web; no se incorporó el archivo fotográfico completo.
 
-Se genero un set coherente de retratos para:
+- `photos/hero-comunidad.jpg`: fotografía grupal real con la marca del congreso al fondo.
+- `photos/auditorio.jpg`: asistentes durante una jornada.
+- `photos/charla-magistral.jpg`: expositor en escenario.
+- `photos/encuentro-marcas.jpg`: conversación en zona de stands.
+- `photos/stands.jpg`: presencia de marcas y colaboradores.
+- `photos/comunidad.jpg`: vínculo entre profesionales.
+- `photos/escenario.jpg`: charla en desarrollo.
+- `photos/participacion.jpg`: participación del público.
+- `photos/casino-ovalle.jpg`: sede del encuentro.
+- `photos/auspiciador-evento.jpg`: auspiciador presente en el congreso.
 
-- Cesar Villalta.
-- Carlos Ruiz.
-- Christel Cuneo.
-- Santiago Fuensalida.
-- Lina Sanz.
-- Enzo Bosco.
+Los nombres originales identifican jornadas y bloques, pero no permiten asegurar el año de cada fotografía. Por esta razón la galería se presenta como “Recuerdos de nuestras ediciones” sin inventar fechas.
 
-Motivo: el usuario pidio no usar los flyers recortados como tarjetas de expositores, sino crear una seccion profesional donde aparezcan los rostros/personas con una estetica nueva para la web.
+## Expositores
 
-Tambien se genero:
+Se conservó el set editorial de la versión anterior, construido desde referencias oficiales entregadas por el usuario:
 
-- Hero grupal desde captura de la pagina de venta para mostrar experiencia real de anos anteriores.
-- Imagen de observatorio en alta calidad para representar la actividad nocturna.
-- Imagen de cata/experiencia pisquera en alta calidad para representar las actividades del Valle del Limari.
+- César Villalta: emergencia y cuidados intensivos.
+- Carlos Ruiz: anestesia y analgesia.
+- Christel Cuneo: odontología veterinaria.
+- Santiago Fuensalida: anestesiología y analgesia.
+- Lina Sanz: medicina felina.
+- Enzo Bosco: neurología.
 
-## Secciones creadas
+Los títulos específicos de varias conferencias siguen pendientes de confirmación, por lo que no se inventaron descripciones adicionales.
 
-- Hero visual con fecha, lugar y CTA.
-- Datos rapidos: precio desde, experiencia completa, programa oficial y observatorio.
-- Experiencia del congreso.
-- Programa completo reconstruido en HTML con paneles desplegables por dia, sin usar la imagen del cronograma como pieza visible.
-- Actividades destacadas reconstruidas como tarjetas web: experiencia pisquera, cata de pisco, observatorio y Fiesta del Pisco.
-- Expositores con retratos AI y texto editable.
-- Entradas y precios.
-- Pago online de entradas con selector de entrada, metodo de pago y resumen.
-- Opciones de pago sugeridas.
-- Marcas aliadas.
-- Contacto, FilaCero, email y mapa.
+## Auspiciadores y colaboradores
 
-## Modulo de pagos para entradas
+Se incorporaron los 16 logos entregados y se normalizaron visualmente dentro de contenedores de tamaño estable. La cinta:
 
-Se implemento como maqueta interactiva interna para mostrar como se veria el pago de entradas dentro de la web:
+- Se desplaza de derecha a izquierda.
+- Repite el conjunto sin espacios vacíos.
+- Avanza automáticamente y ofrece un control visible para pausarlo o reanudarlo.
+- Mantiene el avance automático a menor velocidad cuando el visitante prefiere movimiento reducido.
+- No inventa enlaces ni categorías individuales.
 
-- Selector de entrada: Solo Congreso o Experiencia Completa.
-- Selector de metodo de pago.
-- Resumen de monto.
-- Modal de resumen de inscripcion.
+Marcas reconocibles en los archivos: Medvetarom, Biofresh, Jocaval, VET'S, Purina Pro Plan, IDEXX Agrovet, DataVet, Gerolamo, Drag Pharma, InsuFarma, MSD Animal Health, Veterinaria Roco, Vitanimal, Simona y Zoetis. El primer logo se mantiene identificado visualmente como C Vet según el archivo recibido.
 
-Opciones recomendadas para integracion real:
+## Inscripción y Fila Cero
 
-- Webpay Plus de Transbank: opcion fuerte para tarjetas en Chile.
-- Flow: alternativa agregadora para varios medios de pago y conciliacion.
-- Mercado Pago: checkout rapido y conocido, util si se busca una integracion simple.
-- Khipu: opcion orientada a transferencias/pagos bancarios.
+Se eliminaron los montos y el flujo de pago interno. Las alternativas conservan únicamente información comprobable sobre lo que incluyen.
 
-La version actual no procesa pagos reales. Para produccion se requiere cuenta comercio, credenciales, backend seguro, pruebas de sandbox y politicas de confirmacion de cupos.
+Todos los botones de inscripción obtienen su destino desde `SITE_CONFIG.filaCeroUrl` en `script.js`. Esto permite cambiar la dirección en un solo lugar si la organización actualiza la página oficial.
 
-## Decisiones tomadas
+## Decisiones de accesibilidad y rendimiento
 
-- Web estatica simple con `index.html`, `styles.css` y `script.js`.
-- Identidad basada en cielo nocturno, azul profundo, dorado y celeste.
-- Animaciones por scroll con `IntersectionObserver`.
-- Paneles desplegables para el programa.
-- Hero no encajonado con imagen grupal generada por IA desde referencia real del congreso.
-- La informacion de cronograma y precios se convirtio en HTML/CSS para evitar que la web pareciera un collage de Instagram.
-- Texto de la pagina escrito como experiencia comercial, no como reporte de investigacion.
-- Los assets finales se dejaron en una sola carpeta `assets`, sin subcarpetas.
+- Menú móvil con estado expandido.
+- Estado activo visible y `aria-current`.
+- Enlace para saltar al contenido.
+- Paneles desplegables nativos para programa y preguntas frecuentes.
+- Galería con navegación por teclado y texto alternativo.
+- Movimiento respetuoso de `prefers-reduced-motion`.
+- Fotografías con proporciones estables y carga diferida donde corresponde.
+- Sin rutas locales, imágenes base64 ni dependencias innecesarias en el código final.
 
-## Limitaciones
+## Información pendiente
 
-- Instagram limita el acceso completo sin iniciar sesion; se uso informacion visible publicamente y capturas entregadas por el usuario.
-- Algunos titulos de charlas aparecen como "tema por confirmar"; no se inventaron temas.
-- Los retratos de expositores son reinterpretaciones generadas con IA desde referencias visibles; si el cliente exige fidelidad exacta o autorizaciones formales, conviene solicitar fotografias originales de cada expositor.
-- El pago online es una maqueta funcional. Para produccion requiere cuenta comercio, credenciales, backend seguro, pruebas de sandbox y politicas de confirmacion de cupos.
+- Confirmación de los títulos finales de varias charlas.
+- Posibles cambios de horario comunicados por la organización.
+- Enlaces oficiales individuales de auspiciadores, si se decide hacer clicables los logos en el futuro.
