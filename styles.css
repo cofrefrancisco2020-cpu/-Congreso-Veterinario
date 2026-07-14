@@ -1063,7 +1063,7 @@ summary:focus-visible {
 
 .speaker-card {
   position: relative;
-  min-height: 470px;
+  height: 500px;
   overflow: hidden;
   border-radius: var(--radius);
   background: var(--navy);
@@ -1080,9 +1080,25 @@ summary:focus-visible {
 .speaker-card img {
   width: 100%;
   height: 100%;
-  min-height: 470px;
   object-fit: cover;
+  object-position: center;
   transition: transform 420ms ease;
+}
+
+.speaker-card--cesar img {
+  object-position: 51% center;
+}
+
+.speaker-card--christel img {
+  object-position: center 35%;
+}
+
+.speaker-card--lina img {
+  object-position: 48% center;
+}
+
+.speaker-card--enzo img {
+  object-position: center 30%;
 }
 
 .speaker-card:hover img {
@@ -1908,9 +1924,8 @@ summary:focus-visible {
     grid-template-columns: 1fr;
   }
 
-  .speaker-card,
-  .speaker-card img {
-    min-height: 460px;
+  .speaker-card {
+    height: 460px;
   }
 
   .speaker-cta,
